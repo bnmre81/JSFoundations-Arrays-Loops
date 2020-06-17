@@ -75,7 +75,10 @@ function getDuplicateCount(x, numbers) {
  * - Use string method .endsWith()
  */
 function youGottaCalmDown(s) {
-  // Your code here
+  while (s.endsWith("!!")) {
+    s = s.slice(0, s.length - 1);
+  }
+  return s;
 }
 
 module.exports = { getOdds, getEvens, getDuplicateCount, youGottaCalmDown };
